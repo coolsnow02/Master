@@ -40,6 +40,7 @@ public class RajaMantriChorSipahi extends Activity {
 	}
 
 	@Override
+         //alert box displayed on low memory status
 	public void onlowmemory() {
 		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.setTitle("Low Memory!");
@@ -55,7 +56,6 @@ public class RajaMantriChorSipahi extends Activity {
 		
 		alertDialog.show();
 
-		
 		super.onLowMemory();
 	}
 
