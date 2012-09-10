@@ -219,7 +219,7 @@ public class RajaMantriChorSipahi extends Activity {
  		MainMenu = (Button) findViewById(R.id.MainMenu);
  		MainMenu.setOnClickListener(new OnClickListener() {
 			
-			
+			//onClick function overriden 3
 			public void onClick(View v) {
 				Intent i = new Intent(RajaMantri.this, RajaMantri.class);
 				RajaMantri.this.startActivity(i);
@@ -229,8 +229,8 @@ public class RajaMantriChorSipahi extends Activity {
  		
  		Sign_in = (Button)findViewById(R.id.btnsignin);
  		Sign_in.setOnClickListener(new OnClickListener() {
-			
-			public void onClick(View v) {
+			//onClick function overriden 4
+			public void onClickSignIn(View v) {
 				// TODO Auto-generated method stub
 				
 				player1_name = editTxtPlayer1.getText().toString();
@@ -278,8 +278,9 @@ public class RajaMantriChorSipahi extends Activity {
 				Play = (Button)findViewById(R.id.Play);
 				
 				Play.setOnClickListener(new OnClickListener() {
-		 			
-		 			public void onClick(View v) {
+                                        //onClick function overriden 5
+		 			//change function name
+		 			public void onClickPlay(View v) {
 		 				// TODO Auto-generated method stub
 		 				
 		 				if(Play.getText().equals("SHUFFLE")){
