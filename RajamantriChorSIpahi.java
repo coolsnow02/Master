@@ -395,8 +395,9 @@ public class RajaMantriChorSipahi extends Activity {
 			
 			Pod1.setOnClickListener(new OnClickListener() {
 				
-			
-				public void onClick(View v) {
+			//onClick function overriden
+                        //change function name
+				public void onClickPod1(View v) {
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player1);
 					if(player1.equals("CHOR")){
@@ -425,8 +426,9 @@ public class RajaMantriChorSipahi extends Activity {
 		if(Pod2.getText().equals("")){
 			
 			Pod2.setOnClickListener(new OnClickListener() {
-				
-				public void onClick(View v) {
+				//onClick function overriden
+                                //change function name
+				public void onClickPod2(View v) {
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player2);
 					if(player2.equals("CHOR")){
