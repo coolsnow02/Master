@@ -457,8 +457,10 @@ public class RajaMantriChorSipahi extends Activity {
 			
 			Pod3.setOnClickListener(new OnClickListener() {
 				
+				//onClick function overriden
+                                //change function name
 				
-				public void onClick(View v) {
+				public void onClickPod3(View v) {
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player3);
 					if(player3.equals("CHOR")){
@@ -487,9 +489,10 @@ public class RajaMantriChorSipahi extends Activity {
 		if(Pod4.getText().equals("")){
 			
 			Pod4.setOnClickListener(new OnClickListener() {
-				
+				//onClick function overriden
+                                //change function name
 			
-				public void onClick(View v) {
+				public void onClickPod4(View v) {
 					// TODO Auto-generated method stub
 					Log.v("AkhandBakar","#########" + player4);
 					if(player4.equals("CHOR")){
@@ -515,7 +518,7 @@ public class RajaMantriChorSipahi extends Activity {
 		
     }
     
-    
+//to shuffle the chits among players    
     public void shuffle(){
     	
     	Play.setText("Guess");
