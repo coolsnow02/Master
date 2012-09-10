@@ -144,9 +144,9 @@ public class RajaMantriChorSipahi extends Activity {
         k = 0;
         l = 0;
         Help = (Button)findViewById(R.id.Help);
-        Help.setOnClickListener(new OnClickListener() {
-			
-			public void onClick(View v) {
+        Help.setOnClickListener(new OnClickListener(onClick()));
+			//onClick function overriden 1
+			public void onClick() {
 				setContentView(R.layout.help);
 				 // Create the adView
 			    AdView adView = new AdView(RajaMantri.this, AdSize.BANNER, "a14e156523d01de");
@@ -161,19 +161,19 @@ public class RajaMantriChorSipahi extends Activity {
 				TextView txtHelp = (TextView)findViewById(R.id.txtHelp);
 				String text = "Welcome to Nostalgia! This is the paper free version of Raja Mantri Chor Sipahi.\n\nThe game involves bluffing with facial expressions and good guessing. This is a very popular childhood game in India played among kids often during their long summer vacations.\n\nThe game has 4 paper chits with Chor (thief), Sipahi (police), Raja (king) and Mantri (minister). The chits are folded at the start of the game and one of the 4 players will press SHUFFLE each one of the four players is supposed to secretly (by taking the phone and not letting the others see it)pick one chit by clicking on it, the player then clicks on the chit again to fold it back. All the players will then secretly open their chits and read what they have got. \n\nThe player who gets the chit with Raja written on it will say MERA MANTRI KAUN? (Who is my minister?). The player who got the chit with Mantri will say MEIN! (Me). The player who has the Raja chit will then say CHOR SIPAHI KA PATA LAGAO (find out who is the theif and who is the soldier). The player with the Mantri chit will then guess who is the Chor (Thief), if he/she is wrong then his points are deducted and if he is correct he gets more points and the points from the player who got Chor (Thief) chit are deducted.\n\nIf the guess is correct the Chor is wrapped on his wrist by the Mantri, and if the Mantri chit is wrong then Chor gets to hit his wrist.";
 				txtHelp.setText(text);
+}
+
 				Button Back = (Button)findViewById(R.id.btnMainMenuHelp);
-				Back.setOnClickListener(new OnClickListener() {
-					
+				Back.setOnClickListener(new OnClickListener(onClick(View v));
+				//onClick function overriden 2	
 					public void onClick(View v) {
 						
 						Intent i = new Intent(RajaMantri.this, RajaMantri.class);
 						RajaMantri.this.startActivity(i);
 						finish();
 					}
-				});
-			}
-		});
-        RajaMantri = (Button) findViewById(R.id.RajaMantri);
+					
+        RajaMantri = (Button)findViewById(R.id.RajaMantri);
         RajaMantri.setOnClickListener(new OnClickListener() {
         	
  		public void onClick(View v) {
