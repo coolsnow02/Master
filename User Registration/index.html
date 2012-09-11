@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>
+User Registration Form
+</title>
+
+<link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
+<script type="text/javascript" src="JavaScript/validation.js"></script>
+<script type="text/javascript"></script>
+
+</head>
+
+<body bgcolor="LemonChiffon">
+<div id="main">
+<div id="header"><h2>User Registration Page</h2></div>
+
+<form name="index" action="http://blooming-beach-2334.herokuapp.com/users.json" method="POST"/>
+
+<div>
+<label for="name">Name :</label>
+<input type="text" name="name" id="name"/>
+<span id="nameInfo"></span>
+</div>
+
+<div>
+<label for="age">Age :</label>
+<input type="text" name="age" id="age"/>
+<span id="ageInfo"></span>
+</div>
+
+<div>
+<label for="gender">Gender :</label>
+<input type="radio" name="gender" value="female"/> Female
+<input type="radio" name="gender" value="male"/> Male 
+<span id="genderInfo"></span>
+</div>
+
+<div>
+<label for="address">Address :</label>
+<textarea name="address" id="address"></textarea>
+<span id="addrInfo"></span>
+</div>
+
+<div>
+<label for="pincode">Pincode :</label>
+<input type="text" name="pincode" id="pincode"/>
+<span id="pinInfo"></span>
+</div>
+
+<div>
+<label for="email">Email :</label>
+<input type="text" name="email" id="email"/><br/>
+<span id="emailInfo"></span>
+</div>
+
+<div>
+<label for="description">Describe Yourself</label>
+<textarea id="description" name="description"></textarea>
+<span id="descriptionInfo"></span>
+</div>
+
+<div> <input type="submit" id="register" name="register" value="Register" onClick="validation()"/>
+<input type="button" id="show" name="show" value="Show User List"/> 
+<span id="btninfo"></span>
+</div>
+
+</form>
+</div>
+
+</body>
+</html>

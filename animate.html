@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> My First Animation using Ajax & JQuery </TITLE>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+</HEAD>
+
+<BODY>
+
+<div id="click_me" >
+<font color="blue">
+Like Me!
+</font>
+</div>
+<img id="tree" src="trees1.jpeg" alt="" width="400" height="300"
+ style="position: relative; left: 20px;" />
+
+<script>
+$('#click_me').click(function() {
+$("#target").hide();
+$('#tree').animate({
+opacity: 0.25,
+left: '+=50',
+height: 'toggle'
+}, 5000, function() {
+// Animation complete.
+$("#target").html("<h3>"+ "Click again above link to animate"
++ "</h3>").fadeIn("slow");
+});
+});
+
+</script>
+<font color="blue">
+<div id="target" style="display: none;"></div>
+</font>
+</BODY>
+</HTML>
