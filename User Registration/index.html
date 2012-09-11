@@ -5,7 +5,9 @@ User Registration Form
 </title>
 
 <link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
-<script type="text/javascript" src="JavaScript/validation.js"></script>
+<script type="text/javascript" src="JavaScript/validation1.js"></script>
+<script type="text/javascript" src="JavaScript/show.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript"></script>
 
 </head>
@@ -14,7 +16,7 @@ User Registration Form
 <div id="main">
 <div id="header"><h2>User Registration Page</h2></div>
 
-<form name="index" action="http://blooming-beach-2334.herokuapp.com/users.json" method="POST"/>
+<form name="index" id="index" action="http://blooming-beach-2334.herokuapp.com/users.json" method="POST"/>
 
 <div>
 <label for="name">Name :</label>
@@ -59,7 +61,7 @@ User Registration Form
 <span id="descriptionInfo"></span>
 </div>
 
-<div> <input type="submit" id="register" name="register" value="Register" onClick="validation()"/>
+<div> <input type="submit" id="register" name="register" value="Register"/>
 <input type="button" id="show" name="show" value="Show User List"/> 
 <span id="btninfo"></span>
 </div>

@@ -6,18 +6,18 @@ body{
 }
 
 #index{
-	padding: 15px 10px 10px;
+	padding: 0px 10px 10px;
 }
 #index label{
 	display: block;
-	color: #797979;
-	font-weight: 700;
-	line-height: 1.4em;
+	color: #000000;
+	line-height: 10px;
+        font-weight: bold;
 }
 #index input{
-        margin: 20px;
+        margin: 6px;
 	width: 220px;
-	padding: 10px;
+	padding: 6px;
 	color: #949494;
 	font-size: 12px;
 	border: 1px solid #cecece;
@@ -29,9 +29,9 @@ body{
 }
 
 #index textarea{
-	width: 550px;
+	width: 450px;
 	height: 80px;
-	padding: 10px;
+	padding: 6px;
 	color: #adaeae;
 	font-size: 12px;
 	border: 1px solid #cecece;
@@ -43,11 +43,10 @@ body{
 }
 
 #index div{
-	margin-bottom: 25px;
+	margin-bottom: 6px;
 }
-
 #index div span{
-	margin-left: 20px;
+	margin-left: 10px;
 	color: #b1b1b1;
 	font-size: 12px;
 }
@@ -57,28 +56,30 @@ body{
 }
 
 #index #register{
-	background: #6f9ff1;
-	color: #A9A9A9;
+	background: #778899;
+	color: #FFFAFA;
 	cursor: pointer;
+        font-weight: bold;
 }
 
 #index #register:hover{
-	background: #B0C4DE;
+	background: #708090;
 }
 
 #index #show{
-	background: #6f9ff1;
-	color: #A9A9A9;
+	background: #778899;
+	color: #FFFAFA;
 	cursor: pointer;
+        font-weight: bold;
 }
 
 #index #show:hover{
-	background: #B0C4DE;
+	background: #708090;
 }
 
 
 #error{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border: 1px solid #efefef;
 }
 
@@ -90,14 +91,14 @@ body{
 
 #error ul li{
 	list-style-position: inside;
-	line-height: 1.6em;
+	line-height: 5px;
 }
 
 #error ul li strong{
 	color: #e46c6d;
 }
 
-#error.valid ul li strong{
+#error .valid ul li strong{
 	color: #93d72e;
 }
 
