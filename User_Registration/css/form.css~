@@ -17,9 +17,7 @@ h1{
 	padding: 0px 10px 10px;
 }
 
-#retrieve div{
-	display: inline-block;
-}
+#retrieve div{display: inline-block;}
 
 #index label{
 	display: inline-block;

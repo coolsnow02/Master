@@ -20,7 +20,6 @@ $(document).ready(function(){$("show").click(function(){get
 </script>
 
 <div id="main">
-
 <div id="header"><h2>User Registration Page</h2></div>
 
 <form name="index" id="index" action="http://blooming-beach-2334.herokuapp.com/users.json" method="POST">

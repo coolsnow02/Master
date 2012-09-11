@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 	//On Submitting
 	form.submit(function(){
-		if(validateName() && validateAge() && validateGender() && validateAddr() && validatePin() && validateEmail() && validateDesc())
+		if(validateName() & validateAge() & validateGender() & validateAddr() & validatePin() & validateEmail() & validateDesc())
 			return true
 		else
 			return false;
