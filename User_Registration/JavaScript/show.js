@@ -1,0 +1,3 @@
+$(#show).click(function(){
+$.getJSON("http://blooming-beach-2334.herokuapp.com/users.json");
+});
