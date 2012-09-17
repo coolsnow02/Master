@@ -1,154 +1,371 @@
 webonise@webonise-desktop:/home$ irb
+
 1.9.3p194 :001 > string_1="RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
- => "RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag." 
+
+ => "RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
+
+ 
 
 1)
+
 1.9.3p194 :034 > count_1= string_1.scan(ruby)
- => ["RUBY", "RUBY", "RUBY"] 
+
+ => ["RUBY", "RUBY", "RUBY"]
+
 1.9.3p194 :035 > count_1.count('RUBY')
- => 3 
+
+ => 3
+
+ 
 
 2) 1.9.3p194 :184 > string_1.to_enum(:scan,/(RUBY)/i).map do |m,|
+
 1.9.3p194 :185 >     p [$`.size,m]
+
 1.9.3p194 :186?>   end
+
 [0, "RUBY"]
+
 [112, "RUBY"]
+
 [194, "RUBY"]
+
 [217, "RUBY"]
 
+ 
+
+ 
 
 3)
+
  string_1_array=[]
- => [] 
+
+ => []
+
 1.9.3p194 :074 > string_1_array=string_1.split(" ")
- => ["RUBY", "parses", "a", "file", "by", "looking", "for", "<br/>", "one", "of", "the", "special", "tags", "that", "tells", "it", "to", "start", "interpreting", "the", "text", "as", "RUBY", "code.", "The", "parser", "then", "executes", "all", "of", "the", "code", "it", "finds", "until", "it", "runs", "into", "a", "RUBY", "closing", "<br/>", "tag."] 
+
+ => ["RUBY", "parses", "a", "file", "by", "looking", "for", "<br/>", "one", "of", "the", "special", "tags", "that", "tells", "it", "to", "start", "interpreting", "the", "text", "as", "RUBY", "code.", "The", "parser", "then", "executes", "all", "of", "the", "code", "it", "finds", "until", "it", "runs", "into", "a", "RUBY", "closing", "<br/>", "tag."]
+
+ 
 
 1.9.3p194 :086 > string_1_array.each do |i|
-1.9.3p194 :087 >     puts i
-1.9.3p194 :088?>   end
-RUBY
-parses
-a
-file
-by
-looking
-for
-<br/>
-one
-of
-the
-special
-tags
-that
-tells
-it
-to
-start
-interpreting
-the
-text
-as
-RUBY
-code.
-The
-parser
-then
-executes
-all
-of
-the
-code
-it
-finds
-until
-it
-runs
-into
-a
-RUBY
-closing
-<br/>
-tag.
- => ["RUBY", "parses", "a", "file", "by", "looking", "for", "<br/>", "one", "of", "the", "special", "tags", "that", "tells", "it", "to", "start", "interpreting", "the", "text", "as", "RUBY", "code.", "The", "parser", "then", "executes", "all", "of", "the", "code", "it", "finds", "until", "it", "runs", "into", "a", "RUBY", "closing", "<br/>", "tag."] 
 
+1.9.3p194 :087 >     puts i
+
+1.9.3p194 :088?>   end
+
+RUBY
+
+parses
+
+a
+
+file
+
+by
+
+looking
+
+for
+
+<br/>
+
+one
+
+of
+
+the
+
+special
+
+tags
+
+that
+
+tells
+
+it
+
+to
+
+start
+
+interpreting
+
+the
+
+text
+
+as
+
+RUBY
+
+code.
+
+The
+
+parser
+
+then
+
+executes
+
+all
+
+of
+
+the
+
+code
+
+it
+
+finds
+
+until
+
+it
+
+runs
+
+into
+
+a
+
+RUBY
+
+closing
+
+<br/>
+
+tag.
+
+ => ["RUBY", "parses", "a", "file", "by", "looking", "for", "<br/>", "one", "of", "the", "special", "tags", "that", "tells", "it", "to", "start", "interpreting", "the", "text", "as", "RUBY", "code.", "The", "parser", "then", "executes", "all", "of", "the", "code", "it", "finds", "until", "it", "runs", "into", "a", "RUBY", "closing", "<br/>", "tag."]
+
+ 
+
+ 
 
 4)
+
 1.9.3p194 :089 > string_1_array.map{|w| w.capitalize}.join(' ')
- => "Ruby Parses A File By Looking For <br/> One Of The Special Tags That Tells It To Start Interpreting The Text As Ruby Code. The Parser Then Executes All Of The Code It Finds Until It Runs Into A Ruby Closing <br/> Tag." 
+
+ => "Ruby Parses A File By Looking For <br/> One Of The Special Tags That Tells It To Start Interpreting The Text As Ruby Code. The Parser Then Executes All Of The Code It Finds Until It Runs Into A Ruby Closing <br/> Tag."
+
+ 
 
 5)
+
 1.9.3p194 :090 > string_2="RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used."
- => "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used." 
+
+ => "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used."
+
+ 
 
 1.9.3p194 :091 > puts string_1.concat(string_2)
+
 RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag.RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used.
- => nil 
+
+ => nil
+
+ 
 
 6)a]
+
 1.9.3p194 :165 >puts <<END
+
 1.9.3p194 :166"> #{string_1}
+
 1.9.3p194 :167"> END
+
 RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag.RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used.
 
+ 
+
 b]
+
 1.9.3p194 :168 > puts <<END
+
 1.9.3p194 :169"> #{string_2}
+
 1.9.3p194 :170"> END
+
 RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used.
- => nil 
+
+ => nil
+
  
+
  7)1.9.3p194 :171 > Time.now.strftime("%d/%m/%Y")
- => "13/09/2012" 
+
+ => "13/09/2012"
+
  
+
  8) 1.9.3p194 :215 > time.strftime('%d %b %Y')
- => "13 Sep 2012" 
+
+ => "13 Sep 2012"
+
  
+
  9) 1.9.3p194 :032 > Time.now+(3600*24*7)
- => 2012-09-20 20:14:24 +0530 
+
+ => 2012-09-20 20:14:24 +0530
 
  
- 10)
+
  
- 11) 
+
+ 10) irb(main):025:0> puts string_1.length/4
+
+54
+
+=> nil
+
+ irb(main):024:0> div= string_1.split('').each_slice(54).map{|s| s.join('')}
+
+=> ["RUBY parses a file by looking for <br/> one of the spe", "cial tags that te
+
+lls it to start interpreting the text", " as RUBY code. The parser then executes
+
+ all of the cod", "e it finds until it runs into a RUBY closing <br/> tag", ".\n
+
+"]
+
+ 
+
+ 11)
+
  a] 1.9.3p194 :176 > reverse_string= string_1.split('.')
- => ["RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code", " The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag", "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used"] 
+
+ => ["RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code", " The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag", "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used"]
+
 1.9.3p194 :177 > string_1_array=string_1.split(".")
- => ["RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code", " The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag", "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used"] 
 
-b] 1.9.3p194 :178 > string_1_array.map{|w| w.reverse}.join(' ') => "edoc YBUR sa txet eht gniterpretni trats ot ti sllet taht sgat laiceps eht fo eno >/rb< rof gnikool yb elif a sesrap YBUR gat >/rb< gnisolc YBUR a otni snur ti litnu sdnif ti edoc eht fo lla setucexe neht resrap ehT  desu si elbairav eht hcihw ni txetnoc eht yb denimreted si epyt s'elbairav a ;noitaralced elbairav ni noitinifed epyt ticilpxe )troppus ro( eriuqer ton seod YBUR" 
+ => ["RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code", " The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag", "RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used"]
 
  
- 12) 
+
+b] 1.9.3p194 :178 > string_1_array.map{|w| w.reverse}.join(' ') => "edoc YBUR sa txet eht gniterpretni trats ot ti sllet taht sgat laiceps eht fo eno >/rb< rof gnikool yb elif a sesrap YBUR gat >/rb< gnisolc YBUR a otni snur ti litnu sdnif ti edoc eht fo lla setucexe neht resrap ehT  desu si elbairav eht hcihw ni txetnoc eht yb denimreted si epyt s'elbairav a ;noitaralced elbairav ni noitinifed epyt ticilpxe )troppus ro( eriuqer ton seod YBUR"
+
  
+
+ 
+
+ 12)
+
+irb(main):043:0> string_1.gsub(/<.*?>/,"")
+
+=> "RUBY parses a file by looking for  one of the special tags that tells it to
+
+start interpreting the text as RUBY code. The parser then executes all of the co
+
+de it finds until it runs into a RUBY closing  tag.\n"
+
+ 
+
  13)
+
+irb(main):044:0> string_1.scan('RUBY')
+
+=> ["RUBY", "RUBY", "RUBY"]
+
  
+
+                  OR
+
+irb(main):045:0> puts string_1.scan('RUBY')
+
+RUBY
+
+RUBY
+
+RUBY
+
+=> nil
+
+ 
+
  14)
+
  a] 1.9.3p194 :174 > puts string_1.length
-379
+
+218
+
+ 
 
 b] 1.9.3p194 :175 > puts string_2.length
+
 162
 
  
- 15)
+
  
+
+ 15) irb(main):046:0> File.new("my_new_file.txt", "w")
+
+=> #<File:my_new_file.txt>
+
+ 
+
+irb(main):049:0> newfile=File.open("my_new_file.txt", "w+")
+
+=> #<File:my_new_file.txt>
+
+irb(main):050:0> newfile.puts(string_1)
+
+=> nil
+
+irb(main):051:0> newfile.rewind
+
+=> 0
+
+irb(main):052:0> newfile.readline
+
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells i
+
+t to start interpreting the text as RUBY code. The parser then executes all of t
+
+he code it finds until it runs into a RUBY closing <br/> tag.\n"
+
+ 
+
+ 
+
  16) 1.9.3p194 :030 > global_variables
- => [:$;, :$-F, :$@, :$!, :$SAFE, :$~, :$&, :$`, :$', :$+, :$=, :$KCODE, :$-K, :$,, :$/, :$-0, :$\, :$_, :$stdin, :$stdout, :$stderr, :$>, :$<, :$., :$FILENAME, :$-i, :$*, :$?, :$$, :$:, :$-I, :$LOAD_PATH, :$", :$LOADED_FEATURES, :$VERBOSE, :$-v, :$-w, :$-W, :$DEBUG, :$-d, :$0, :$PROGRAM_NAME, :$-p, :$-l, :$-a, :$binding, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9] 
+
+ => [:$;, :$-F, :$@, :$!, :$SAFE, :$~, :$&, :$`, :$', :$+, :$=, :$KCODE, :$-K, :$,, :$/, :$-0, :$\, :$_, :$stdin, :$stdout, :$stderr, :$>, :$<, :$., :$FILENAME, :$-i, :$*, :$?, :$$, :$:, :$-I, :$LOAD_PATH, :$", :$LOADED_FEATURES, :$VERBOSE, :$-v, :$-w, :$-W, :$DEBUG, :$-d, :$0, :$PROGRAM_NAME, :$-p, :$-l, :$-a, :$binding, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9]
 
  
+
+ 
+
  17)
- 
- 18)
- 
- 19)
- 
- 20) 1.9.3p194 :033 > Time.now+(3600*24*20)
- => 2012-10-03 20:15:27 +0530 
- 
- 21) 1.9.3p194 :034 > time=Time.now
- => 2012-09-13 20:16:24 +0530 
-1.9.3p194 :035 > time.to_a
- => [24, 16, 20, 13, 9, 2012, 4, 257, false, "IST"] 
 
  
+
+ 18)
+
  
+
+ 19) irb(main):084:0> Time.new(12-4-2010) < Time.new(12-5-2011)
+
+=> false
+
+ 
+
+ 20) 1.9.3p194 :033 > Time.now+(3600*24*20)
+
+ => 2012-10-03 20:15:27 +0530
+
+ 
+
+ 21) 1.9.3p194 :034 > time=Time.now
+
+ => 2012-09-13 20:16:24 +0530
+
+1.9.3p194 :035 > time.to_a
+
+ => [24, 16, 20, 13, 9, 2012, 4, 257, false, "IST"]
+
+
