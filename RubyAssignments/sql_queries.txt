@@ -1,4 +1,4 @@
-mysql>create table category_list(id int Primary Key auto_increment=1, link varchar(30));
+mysql>create table category_list(id int Primary Key auto_increment, link varchar(30));
 
 mysql> desc category_list;
 +--------+------------------+------+-----+---------+----------------+
@@ -8,6 +8,250 @@ mysql> desc category_list;
 | url_id | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
 +--------+------------------+------+-----+---------+----------------+
 2 rows in set (0.00 sec)
+
+mysql> select * from category_list;
++----------------------------------------------------+--------+
+| link                                               | url_id |
++----------------------------------------------------+--------+
+| http://www.simplyrecipes.com/recipe-index.php      |      1 |
+| http://www.simplyrecipes.com/tag/Acorn%20Squash    |      2 |
+| http://www.simplyrecipes.com/tag/Adobado           |      3 |
+| http://www.simplyrecipes.com/tag/Adobo             |      4 |
+| http://www.simplyrecipes.com/tag/African           |      5 |
+| http://www.simplyrecipes.com/tag/Agua%20Fresca     |      6 |
+| http://www.simplyrecipes.com/tag/Ahi%20Tuna        |      7 |
+| http://www.simplyrecipes.com/tag/Almond            |      8 |
+| http://www.simplyrecipes.com/tag/Apple             |      9 |
+| http://www.simplyrecipes.com/tag/Apple%20Cake      |     10 |
+| http://www.simplyrecipes.com/tag/Apple%20Cider     |     11 |
+| http://www.simplyrecipes.com/tag/Apple%20Pie       |     12 |
+| http://www.simplyrecipes.com/tag/Applesauce        |     13 |
+| http://www.simplyrecipes.com/tag/Apricot           |     14 |
+| http://www.simplyrecipes.com/tag/Arame             |     15 |
+| http://www.simplyrecipes.com/tag/Artichoke         |     16 |
+| http://www.simplyrecipes.com/tag/Arugula           |     17 |
+| http://www.simplyrecipes.com/tag/Arugula%20Salad   |     18 |
+| http://www.simplyrecipes.com/tag/Asparagus         |     19 |
+| http://www.simplyrecipes.com/tag/Avocado           |     20 |
+| http://www.simplyrecipes.com/tag/Bacon             |     21 |
+| http://www.simplyrecipes.com/tag/Baked%20Apple     |     22 |
+| http://www.simplyrecipes.com/tag/Baked%20Beans     |     23 |
+| http://www.simplyrecipes.com/tag/Baklava           |     24 |
+| http://www.simplyrecipes.com/tag/Banana            |     25 |
+| http://www.simplyrecipes.com/tag/Barbecue          |     26 |
+| http://www.simplyrecipes.com/tag/Barbecue%20Sauce  |     27 |
+| http://www.simplyrecipes.com/tag/Bark              |     28 |
+| http://www.simplyrecipes.com/tag/Barley            |     29 |
+| http://www.simplyrecipes.com/tag/Basil             |     30 |
+| http://www.simplyrecipes.com/tag/BBQ               |     31 |
+| http://www.simplyrecipes.com/tag/Bean              |     32 |
+| http://www.simplyrecipes.com/tag/Bean%20Salad      |     33 |
+| http://www.simplyrecipes.com/tag/Bean%20Threads    |     34 |
+| http://www.simplyrecipes.com/tag/Beef              |     35 |
+| http://www.simplyrecipes.com/tag/Beef%20Roast      |     36 |
+| http://www.simplyrecipes.com/tag/Beef%20Stew       |     37 |
+| http://www.simplyrecipes.com/tag/Beer              |     38 |
+| http://www.simplyrecipes.com/tag/Beet              |     39 |
+| http://www.simplyrecipes.com/tag/Beet%20Salad      |     40 |
+| http://www.simplyrecipes.com/tag/Bell%20Pepper     |     41 |
+| http://www.simplyrecipes.com/tag/Berries           |     42 |
+| http://www.simplyrecipes.com/tag/Berry             |     43 |
+| http://www.simplyrecipes.com/tag/Beurre%20Blanc    |     44 |
+| http://www.simplyrecipes.com/tag/Biscotti          |     45 |
+| http://www.simplyrecipes.com/tag/Biscuit           |     46 |
+| http://www.simplyrecipes.com/tag/Bison             |     47 |
+| http://www.simplyrecipes.com/tag/Bisque            |     48 |
+| http://www.simplyrecipes.com/tag/Black%20Bean      |     49 |
+| http://www.simplyrecipes.com/tag/Black%20Beans     |     50 |
+| http://www.simplyrecipes.com/tag/Black%20Eyed%20Pe |     51 |
+| http://www.simplyrecipes.com/tag/Blackberry        |     52 |
+| http://www.simplyrecipes.com/tag/Blondie           |     53 |
+| http://www.simplyrecipes.com/tag/Blood%20Orange    |     54 |
+| http://www.simplyrecipes.com/tag/Blue%20Cheese     |     55 |
+| http://www.simplyrecipes.com/tag/Blueberry         |     56 |
+| http://www.simplyrecipes.com/tag/Bok%20Choy        |     57 |
+| http://www.simplyrecipes.com/tag/Bolognese         |     58 |
+| http://www.simplyrecipes.com/tag/Bouillon          |     59 |
+| http://www.simplyrecipes.com/tag/Bourbon           |     60 |
+| http://www.simplyrecipes.com/tag/Bourbon%20Sauce   |     61 |
+| http://www.simplyrecipes.com/tag/Boursin           |     62 |
+| http://www.simplyrecipes.com/tag/Boysenberry       |     63 |
+| http://www.simplyrecipes.com/tag/Braised%20Beef    |     64 |
+| http://www.simplyrecipes.com/tag/Branzino          |     65 |
+| http://www.simplyrecipes.com/tag/Brazilian         |     66 |
+| http://www.simplyrecipes.com/tag/Bread             |     67 |
+| http://www.simplyrecipes.com/tag/Bread%20Pudding   |     68 |
+| http://www.simplyrecipes.com/tag/Breakfast         |     69 |
+| http://www.simplyrecipes.com/tag/Breakfast%20Casse |     70 |
+| http://www.simplyrecipes.com/tag/Brie              |     71 |
+| http://www.simplyrecipes.com/tag/Brisket           |     72 |
+| http://www.simplyrecipes.com/tag/Broccoli          |     73 |
+| http://www.simplyrecipes.com/tag/Broccoli%20Rabe   |     74 |
+| http://www.simplyrecipes.com/tag/Brown%20Butter    |     75 |
+| http://www.simplyrecipes.com/tag/Brown%20Derby     |     76 |
+| http://www.simplyrecipes.com/tag/Browned%20Butter  |     77 |
+| http://www.simplyrecipes.com/tag/Brownies          |     78 |
+| http://www.simplyrecipes.com/tag/Brunch            |     79 |
+| http://www.simplyrecipes.com/tag/Bruschetta        |     80 |
+| http://www.simplyrecipes.com/tag/Brussels%20Sprout |     81 |
+| http://www.simplyrecipes.com/tag/Buckwheat         |     82 |
+| http://www.simplyrecipes.com/tag/Buffalo           |     83 |
+| http://www.simplyrecipes.com/tag/Bun               |     84 |
+| http://www.simplyrecipes.com/tag/Bundt%20Cake      |     85 |
+| http://www.simplyrecipes.com/tag/Burger            |     86 |
+| http://www.simplyrecipes.com/tag/Burrito           |     87 |
+| http://www.simplyrecipes.com/tag/Butter            |     88 |
+| http://www.simplyrecipes.com/tag/Butter%20Pecan    |     89 |
+| http://www.simplyrecipes.com/tag/Butter%20Sauce    |     90 |
+| http://www.simplyrecipes.com/tag/Butterflied%20chi |     91 |
+| http://www.simplyrecipes.com/tag/Buttermilk        |     92 |
+| http://www.simplyrecipes.com/tag/Butternut%20Squas |     93 |
+| http://www.simplyrecipes.com/tag/Butterscotch      |     94 |
+| http://www.simplyrecipes.com/tag/Cabbage           |     95 |
+| http://www.simplyrecipes.com/tag/Cacciatore        |     96 |
+| http://www.simplyrecipes.com/tag/Cactus            |     97 |
+| http://www.simplyrecipes.com/tag/Cajun             |     98 |
+| http://www.simplyrecipes.com/tag/Cake              |     99 |
+| http://www.simplyrecipes.com/tag/Calamari          |    100 |
+| http://www.simplyrecipes.com/tag/Candy             |    101 |
+| http://www.simplyrecipes.com/tag/Canned%20Sardine  |    102 |
+| http://www.simplyrecipes.com/tag/Canned%20Tuna     |    103 |
+| http://www.simplyrecipes.com/tag/Cannellini%20Bean |    104 |
+| http://www.simplyrecipes.com/tag/Canning           |    105 |
+| http://www.simplyrecipes.com/tag/Cantaloupe        |    106 |
+| http://www.simplyrecipes.com/tag/Caponata          |    107 |
+| http://www.simplyrecipes.com/tag/Caramel           |    108 |
+| http://www.simplyrecipes.com/tag/Caramelized%20Oni |    109 |
+| http://www.simplyrecipes.com/tag/Caraway           |    110 |
+| http://www.simplyrecipes.com/tag/Carbonara         |    111 |
+| http://www.simplyrecipes.com/tag/Cardamom          |    112 |
+| http://www.simplyrecipes.com/tag/Caribbean         |    113 |
+| http://www.simplyrecipes.com/tag/Carne%20Asada     |    114 |
+| http://www.simplyrecipes.com/tag/Carnitas          |    115 |
+| http://www.simplyrecipes.com/tag/Carrot            |    116 |
+| http://www.simplyrecipes.com/tag/Carrot%20Salad    |    117 |
+| http://www.simplyrecipes.com/tag/Cashew            |    118 |
+| http://www.simplyrecipes.com/tag/Casserole         |    119 |
+| http://www.simplyrecipes.com/tag/Cassis            |    120 |
+| http://www.simplyrecipes.com/tag/Cauliflower       |    121 |
+| http://www.simplyrecipes.com/tag/Celery            |    122 |
+| http://www.simplyrecipes.com/tag/Celery%20Root     |    123 |
+| http://www.simplyrecipes.com/tag/Ceviche           |    124 |
+| http://www.simplyrecipes.com/tag/Chai              |    125 |
+| http://www.simplyrecipes.com/tag/Champagne         |    126 |
+| http://www.simplyrecipes.com/tag/Chanterelle       |    127 |
+| http://www.simplyrecipes.com/tag/Chard             |    128 |
+| http://www.simplyrecipes.com/tag/Chayote           |    129 |
+| http://www.simplyrecipes.com/tag/Cheese            |    130 |
+| http://www.simplyrecipes.com/tag/Cheesecake        |    131 |
+| http://www.simplyrecipes.com/tag/Cherry            |    132 |
+| http://www.simplyrecipes.com/tag/Cherry%20Tomato   |    133 |
+| http://www.simplyrecipes.com/tag/Chestnut          |    134 |
+| http://www.simplyrecipes.com/tag/Chicken           |    135 |
+| http://www.simplyrecipes.com/tag/Chicken%20Breast  |    136 |
+| http://www.simplyrecipes.com/tag/Chicken%20Curry   |    137 |
+| http://www.simplyrecipes.com/tag/Chicken%20Drumsti |    138 |
+| http://www.simplyrecipes.com/tag/Chicken%20Feet    |    139 |
+| http://www.simplyrecipes.com/tag/Chicken%20Leg     |    140 |
+| http://www.simplyrecipes.com/tag/Chicken%20Liver   |    141 |
+| http://www.simplyrecipes.com/tag/Chicken%20Roast   |    142 |
+| http://www.simplyrecipes.com/tag/Chicken%20Roulade |    143 |
+| http://www.simplyrecipes.com/tag/Chicken%20Salad   |    144 |
+| http://www.simplyrecipes.com/tag/Chicken%20Soup    |    145 |
+| http://www.simplyrecipes.com/tag/Chicken%20Stew    |    146 |
+| http://www.simplyrecipes.com/tag/Chicken%20Stock   |    147 |
+| http://www.simplyrecipes.com/tag/Chicken%20Thigh   |    148 |
+| http://www.simplyrecipes.com/tag/Chicken%20Wing    |    149 |
+| http://www.simplyrecipes.com/tag/Chickpea          |    150 |
+| http://www.simplyrecipes.com/tag/Chile%20Verde     |    151 |
+| http://www.simplyrecipes.com/tag/Chiles            |    152 |
+| http://www.simplyrecipes.com/tag/Chili             |    153 |
+| http://www.simplyrecipes.com/tag/Chili%20Beans     |    154 |
+| http://www.simplyrecipes.com/tag/Chili%20Sauce     |    155 |
+| http://www.simplyrecipes.com/tag/Chimichurri       |    156 |
+| http://www.simplyrecipes.com/tag/Chinese           |    157 |
+| http://www.simplyrecipes.com/tag/Chinese%20Chicken |    158 |
+| http://www.simplyrecipes.com/tag/Chipotle          |    159 |
+| http://www.simplyrecipes.com/tag/Chocolate         |    160 |
+| http://www.simplyrecipes.com/tag/Chocolate%20Cake  |    161 |
+| http://www.simplyrecipes.com/tag/Chocolate%20Chip  |    162 |
+| http://www.simplyrecipes.com/tag/Chorizo           |    163 |
+| http://www.simplyrecipes.com/tag/Chowder           |    164 |
+| http://www.simplyrecipes.com/tag/Christmas         |    165 |
+| http://www.simplyrecipes.com/tag/Christmas%20Cooki |    166 |
+| http://www.simplyrecipes.com/tag/Chuck%20Roast     |    167 |
+| http://www.simplyrecipes.com/tag/Chutney           |    168 |
+| http://www.simplyrecipes.com/tag/Cider             |    169 |
+| http://www.simplyrecipes.com/tag/Cilantro          |    170 |
+| http://www.simplyrecipes.com/tag/Cinnamon          |    171 |
+| http://www.simplyrecipes.com/tag/Citrus            |    172 |
+| http://www.simplyrecipes.com/tag/Clafouti          |    173 |
+| http://www.simplyrecipes.com/tag/Clam              |    174 |
+| http://www.simplyrecipes.com/tag/Cobb%20Salad      |    175 |
+| http://www.simplyrecipes.com/tag/Cobbler           |    176 |
+| http://www.simplyrecipes.com/tag/Cocktail          |    177 |
+| http://www.simplyrecipes.com/tag/Cocoa%20Nibs      |    178 |
+| http://www.simplyrecipes.com/tag/Coconut           |    179 |
+| http://www.simplyrecipes.com/tag/Coconut%20Milk    |    180 |
+| http://www.simplyrecipes.com/tag/Cod               |    181 |
+| http://www.simplyrecipes.com/tag/Coffee            |    182 |
+| http://www.simplyrecipes.com/tag/Coffee%20Cake     |    183 |
+| http://www.simplyrecipes.com/tag/Cold%20Soup       |    184 |
+| http://www.simplyrecipes.com/tag/Coleslaw          |    185 |
+| http://www.simplyrecipes.com/tag/Collard%20Greens  |    186 |
+| http://www.simplyrecipes.com/tag/Colombian         |    187 |
+| http://www.simplyrecipes.com/tag/Compote           |    188 |
+| http://www.simplyrecipes.com/tag/Cookie            |    189 |
+| http://www.simplyrecipes.com/tag/Cordial           |    190 |
+| http://www.simplyrecipes.com/tag/Corn              |    191 |
+| http://www.simplyrecipes.com/tag/Corn%20Salad      |    192 |
+| http://www.simplyrecipes.com/tag/Cornbread         |    193 |
+| http://www.simplyrecipes.com/tag/Corned%20Beef     |    194 |
+| http://www.simplyrecipes.com/tag/Cornmeal          |    195 |
+| http://www.simplyrecipes.com/tag/Cotija            |    196 |
+| http://www.simplyrecipes.com/tag/Cottage%20Pie     |    197 |
+| http://www.simplyrecipes.com/tag/Cowboy            |    198 |
+| http://www.simplyrecipes.com/tag/Crab              |    199 |
+| http://www.simplyrecipes.com/tag/Crab%20Salad      |    200 |
+| http://www.simplyrecipes.com/tag/Cranberry         |    201 |
+| http://www.simplyrecipes.com/tag/Cream%20Cheese    |    202 |
+| http://www.simplyrecipes.com/tag/Cream%20Sauce     |    203 |
+| http://www.simplyrecipes.com/tag/Creole            |    204 |
+| http://www.simplyrecipes.com/tag/Crostini          |    205 |
+| http://www.simplyrecipes.com/tag/Crouton           |    206 |
+| http://www.simplyrecipes.com/tag/Crumble           |    207 |
+| http://www.simplyrecipes.com/tag/Cucumber          |    208 |
+| http://www.simplyrecipes.com/tag/Cucumber%20Salad  |    209 |
+| http://www.simplyrecipes.com/tag/Cupcake           |    210 |
+| http://www.simplyrecipes.com/tag/Curry             |    211 |
+| http://www.simplyrecipes.com/tag/Custard           |    212 |
+| http://www.simplyrecipes.com/tag/Daikon            |    213 |
+| http://www.simplyrecipes.com/tag/Date              |    214 |
+| http://www.simplyrecipes.com/tag/Deep%20Fried      |    215 |
+| http://www.simplyrecipes.com/tag/Deviled%20Eggs    |    216 |
+| http://www.simplyrecipes.com/tag/Dijestif          |    217 |
+| http://www.simplyrecipes.com/tag/Dijon             |    218 |
+| http://www.simplyrecipes.com/tag/Dinosaur%20Kale   |    219 |
+| http://www.simplyrecipes.com/tag/Dip               |    220 |
+| http://www.simplyrecipes.com/tag/Dr.%20Pepper      |    221 |
+| http://www.simplyrecipes.com/tag/Dressing          |    222 |
+| http://www.simplyrecipes.com/tag/Drink             |    223 |
+| http://www.simplyrecipes.com/tag/Dry%20Rub         |    224 |
+| http://www.simplyrecipes.com/tag/Duck              |    225 |
+| http://www.simplyrecipes.com/tag/Dumplings         |    226 |
+| http://www.simplyrecipes.com/tag/Easter            |    227 |
+| http://www.simplyrecipes.com/tag/Edamame           |    228 |
+| http://www.simplyrecipes.com/tag/Egg               |    229 |
+| http://www.simplyrecipes.com/tag/Egg%20Noodles     |    230 |
+| http://www.simplyrecipes.com/tag/Egg%20Salad       |    231 |
+| http://www.simplyrecipes.com/tag/Eggnog            |    232 |
+| http://www.simplyrecipes.com/tag/Eggplant          |    233 |
+| http://www.simplyrecipes.com/tag/Elderberry        |    234 |
+| http://www.simplyrecipes.com/tag/Empanada          |    235 |
+| http://www.simplyrecipes.com/tag/Enchiladas        |    236 |
++----------------------------------------------------+--------+
+236 rows in set (0.00 sec)
+
 
 
 mysql> create table recipies(link_2 varchar(30) Primary Key, id int UNSIGNED, Foreign Key(id) references category_list(url_id));
@@ -21,6 +265,8 @@ mysql> desc recipies;
 | id     | int(10) unsigned | YES  | MUL | NULL    |       |
 +--------+------------------+------+-----+---------+-------+
 2 rows in set (0.00 sec)
+
+
 
 
 mysql> create table recipe_details(id int UNSIGNED, link varchar(30), name varchar(20) Primary Key, img_link varchar(30), description varchar(200), method varchar(500), Foreign Key(id) references category_list(url_id), Foreign Key(link) references recipies(link_2));

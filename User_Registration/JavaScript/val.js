@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function(event){
 	//global variables
-
+	
 	var form = $("#index");
 	
         var name = $("#name").val();
@@ -16,17 +16,18 @@ $(document).ready(function(){
 	var description = $("#description").val();
 
 form.submit(function(event){
-		if(validateName(name) && validateAge(age) && validateAddress(address) && validatePincode(pincode) && validateEmail(email) && validateDescription(description))
-			return true;
-		else
-			return false;
+
+		if(validateName(name) && validateAge(age) && validateAddress(address) && validatePincode(pincode) && validateEmail(email) && validateDescription(description)){
+			return true;}
+		else{
+			return false;}
 	});
 
 });
 function validateName(name_verify){
 		//NOT valid name
                 var a=name_verify;
-                var expr1= /^[A-z][^0-9]\s[A-z][^0-9]ig/;
+                var expr1= /^[A-z\s][^0-9]ig/;
 		if(a.length < 4 || expr1.test(a))
 		{
 			$("#nameInfo").text("Enter a valid name!");
@@ -49,7 +50,6 @@ function validateEmail(email_verify){
 		
 		//valid email
 		if(expr2.test(b)){
-			
          		return true;
 		}
 
@@ -67,7 +67,7 @@ function validateAge(age_verify){
 		var c = age_verify;
 		var expr6 = /^[0-9]+/;
 		//NOT valid age
-		if(c.length<=2){
+		if(expr6.test(c)){
 		
 			return true;
 		}
@@ -85,7 +85,7 @@ function validateAge(age_verify){
 
 function validateAddress(addr_verify){
 		var e = addr_verify;
-              var expr3= /^[A-z0-9]+[A-z0-9.,-]+/g;
+              var expr3= /^[A-z0-9]+[A-z0-9.,-]+/;
 		//valid address
 		if(expr3.test(e)){
 			return true;
@@ -101,7 +101,7 @@ function validateAddress(addr_verify){
 
 function validatePincode(pincode_verify){
 		var f = pincode_verify;
-                var expr4= /[0-9]/g;
+                var expr4= /^[0-9]/;
 		//valid pincode
 		if(expr4.test(f) && f.length==6){
 

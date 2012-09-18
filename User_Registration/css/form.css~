@@ -5,6 +5,14 @@ body{
         text-align: left;
 }
 
+#index
+{
+float:left;
+width:110px;
+height:90px;
+margin:5px;
+}
+
 h1{
  background: #008A2E;
 }
@@ -17,7 +25,9 @@ h1{
 	padding: 0px 10px 10px;
 }
 
-#retrieve div{display: inline-block;}
+#retrieve div{
+	display: inline-block;
+}
 
 #index label{
 	display: inline-block;
