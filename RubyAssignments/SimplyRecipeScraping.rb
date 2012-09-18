@@ -20,7 +20,7 @@ end
    recipe_category.each do |index|
   if index.present?
  puts index
-  doc_2=Nokogiri::HTML(open(index))
+  doc_2=Nokogiri::HTML(open(#{index}))
 
 
         doc_2.each do |i|
