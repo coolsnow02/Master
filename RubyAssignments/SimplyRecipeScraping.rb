@@ -38,10 +38,10 @@ url_main="http://www.simplyrecipes.com/subject-index.php"
 	end
 
 #opening each link to get sub-links and storing those in the table recipies
-	  for j in 0..20
-	   @recipe_category.each do |k|
+	  
+	  @recipe_category.each do |k|
 		  if k.present?
-			 #puts k
+			 for j in 0..20
 			  @doc_2=Nokogiri::HTML(open(k))
 
 #to accept data with escape characters
