@@ -1,0 +1,21 @@
+category listings: .center a
+for all use=> li:nth-child(1) a
+
+class  'fn' for name of recipe
+
+img url class 'photo'
+
+description-  div#entry-individual.entry-> div.hrecipe-> div#recipe-intro->p
+
+recipe- div#entry-individual.entry-> div.hrecipe-> div#recipe-callout
+
+
+
+matching css-
+
+recipe name: #iea .center h1
+recipe img url: .entry img, .entry-photo img src
+recipe description: .center p
+recipe recipe: #recipe-callout
+
+each category page: .archive-entry

@@ -1,0 +1,28 @@
+doubts:
+1)
+
+1.9.3p194 :036 > def count_string
+1.9.3p194 :037?>   count_1=string_1.scan(ruby)
+1.9.3p194 :038?>   puts count_1.count('RUBY')
+1.9.3p194 :039?>   end
+ => nil 
+
+
+Links to visit:
+
+https://www.ruby-toolbox.com/categories/html_parsing
+
+http://nodejs.org/
+
+http://rawkes.com/articles/how-i-scraped-and-stored-over-3-million-tweets
+
+http://rubykoans.com/
+
+http://stackoverflow.com/search?q=scraping+web+pages+using+ruby
+
+http://advws.blogspot.in/2010/10/ruby-mechanize-nokogiri-xpath-and.html
+
+http://www.igvita.com/2007/02/04/ruby-screen-scraper-in-60-seconds/
+
+*Perform this:
+gem install nokogiri
