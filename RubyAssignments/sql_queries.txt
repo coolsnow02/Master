@@ -1,0 +1,41 @@
+mysql>create table category_list(id int Primary Key auto_increment=1, link varchar(30));
+
+mysql> desc category_list;
++--------+------------------+------+-----+---------+----------------+
+| Field  | Type             | Null | Key | Default | Extra          |
++--------+------------------+------+-----+---------+----------------+
+| link   | varchar(50)      | YES  |     | NULL    |                |
+| url_id | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
++--------+------------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+
+mysql> create table recipies(link_2 varchar(30) Primary Key, id int UNSIGNED, Foreign Key(id) references category_list(url_id));
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> desc recipies;
++--------+------------------+------+-----+---------+-------+
+| Field  | Type             | Null | Key | Default | Extra |
++--------+------------------+------+-----+---------+-------+
+| link_2 | varchar(30)      | NO   | PRI | NULL    |       |
+| id     | int(10) unsigned | YES  | MUL | NULL    |       |
++--------+------------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+
+mysql> create table recipe_details(id int UNSIGNED, link varchar(30), name varchar(20) Primary Key, img_link varchar(30), description varchar(200), method varchar(500), Foreign Key(id) references category_list(url_id), Foreign Key(link) references recipies(link_2));
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> desc recipe_details;
++-------------+------------------+------+-----+---------+-------+
+| Field       | Type             | Null | Key | Default | Extra |
++-------------+------------------+------+-----+---------+-------+
+| id          | int(10) unsigned | YES  | MUL | NULL    |       |
+| link        | varchar(30)      | YES  | MUL | NULL    |       |
+| name        | varchar(20)      | NO   | PRI | NULL    |       |
+| img_link    | varchar(30)      | YES  |     | NULL    |       |
+| description | varchar(200)     | YES  |     | NULL    |       |
+| method      | varchar(500)     | YES  |     | NULL    |       |
++-------------+------------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
