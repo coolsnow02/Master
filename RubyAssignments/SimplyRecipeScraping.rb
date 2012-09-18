@@ -21,10 +21,11 @@ end
   if index.present?
  puts index
   doc_2=Nokogiri::HTML(open(index))
-  @client.query ("INSERT INTO recipies(link_2) VALUES ('"+#{index}"')" )
+
 
         doc_2.each do |i|
   if i.present?
+    @client.query ("INSERT INTO recipies(link_2) VALUES ('"+#{i}"')" )
         doc_3=Nokogiri::HTML(open(i))
 recipe_name=doc_3.css(".center h1").text
 recipe_img= doc_3.css(".entry img").map{|href| href ['href']}
