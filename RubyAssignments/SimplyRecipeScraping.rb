@@ -17,11 +17,11 @@ url_main="http://www.simplyrecipes.com/subject-index.php"
 @recipe_category=@doc.css('.center-module a').map{|href| href['href']}
 
 #creating mysql tables
-@client.query("create table if not exists category_lists(id int Primary Key auto_increment, link varchar(30));")
+@client.query("create table if not exists category_lists(id int Primary Key auto_increment, link varchar(100));")
 
-@client.query("create table if not exists recipies(link_2 varchar(30), id int UNSIGNED);")
+@client.query("create table if not exists recipies(link_2 varchar(100), id int UNSIGNED, foreign key (id) references category_lists(id));")
 
-@client.query("create table if not exists recipe_details(id int UNSIGNED, link varchar(30), name varchar(20), img_link varchar(30), description varchar(200), method varchar(500));")
+@client.query("create table if not exists recipe_details(id int UNSIGNED, link varchar(100), name varchar(50), img_link varchar(200), description varchar(500), method varchar(800), foreign key (id) references category_lists(id), foreign key (link_2) references recipies(link_2));")
 
 #to accept escape characters
 
@@ -29,7 +29,7 @@ url_main="http://www.simplyrecipes.com/subject-index.php"
 	@recipe_category.each do |index|
 		 if index.present?
 
-#to accept data with escape characters
+#to handle data with escape characters
 		 category_link_escaped = @client.escape(index)
 			 #puts index
 
@@ -44,7 +44,7 @@ url_main="http://www.simplyrecipes.com/subject-index.php"
 			 for j in 0..20
 			  @doc_2=Nokogiri::HTML(open(k))
 
-#to accept data with escape characters
+#to handle data with escape characters
 			  recipe_link_escaped = @client.escape(k)
 
 			@client.query("INSERT INTO recipies (link_2) VALUES('#{recipe_link_escaped}');" )
@@ -61,12 +61,12 @@ url_main="http://www.simplyrecipes.com/subject-index.php"
 		recipe_description= @doc_3.css("#recipe-intro").text
 		recipe_method=@doc_3.css("#recipe-callout").text
 
-#to accept data with escape characters            
+#to handle data with escape characters            
                 recipe_name_escaped = @client.escape(recipe_name)
-                recipe_name_escaped = @client.escape(recipe_img)
-                recipe_name_escaped = @client.escape(recipe_description)
-                recipe_name_escaped = @client.escape(recipe_method)
+                recipe_img_escaped = @client.escape(recipe_img)
+                recipe_description_escaped = @client.escape(recipe_description)
+                recipe_method_escaped = @client.escape(recipe_method)
 
-		@client.query("INSERT INTO recipe_details (name, img_link, description, method) VALUES('+#{recipe_name}, +#{recipe_img},+#{recipe_description}, +#{recipe_method}');")
+		@client.query("INSERT INTO recipe_details (name, img_link, description, method) VALUES('+#{recipe_name_escaped}, +#{recipe_img_escaped},+#{recipe_description_escaped}, +#{recipe_method_escaped}');")
 	   end #end of if
   end # end of each
